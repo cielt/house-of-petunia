@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "house-of-petunia",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "House of Petunia 🐈",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Petunia Tu <chiayin.l.tu@gmail.com>",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "gatsby": "^4.6.2",
     "gatsby-plugin-gatsby-cloud": "^4.6.0",
     "gatsby-plugin-image": "^2.6.0",
@@ -34,12 +35,5 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
