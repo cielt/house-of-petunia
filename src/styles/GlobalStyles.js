@@ -21,19 +21,112 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+button {
+  appearance: none;
+  border: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
   body {
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: ${props => props.theme.fontSize.base};
-    color: ${props => props.theme.bodyTextColor};
-    font-family: ${props => props.theme.sansFontFamily};
+    font-size: ${({ theme }) => theme.fontSize.base};
+    color: ${({ theme }) => theme.bodyTextColor};
+    font-family: ${({ theme }) => theme.sansFontFamily};
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 0.5em;
+    line-height: ${({ theme }) => theme.lineHeight.header};
+  }
+
+  p, ul, ol, address {
+    margin: 0 0 1em;
+    padding: 0;
+    line-height: ${({ theme }) => theme.lineHeight.body};
   }
 
   h1, h2 {
     font-family: ${({ theme }) => theme.headerFontFamily};
   }
+
+  /* UTILITY CLASSES */
+
+  // max-width
+  .max-w {
+    margin: 0 auto;
+    width: 100%;
+
+    &.max-gl {
+      max-width: ${({ theme }) => theme.breakpoints.l}px;
+    }
+
+    &.max-gm {
+      max-width: ${({ theme }) => theme.breakpoints.m}px;
+    }
+
+    &.max-gs {
+      max-width: ${({ theme }) => theme.breakpoints.s}px;
+    }
+  }
+
+  // padding
+  .pa-2 {
+    padding: ${({ theme }) => theme.spacing.space2}
+  }
+
 `
 
 export default GlobalStyles

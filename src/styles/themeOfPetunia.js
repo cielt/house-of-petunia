@@ -23,8 +23,10 @@ const petuniasTheme = {
   },
   sansFontFamily: "Helvetica, sans-serif",
   headerFontFamily: "Motter Ombra, sans-serif",
-  defaultBodyLineHeight: 1.5,
-  defaultHeaderLineHeight: 1.25,
+  lineHeight: {
+    body: 1.5,
+    header: 1.25,
+  },
   borderRad: "10px",
   boxShadow: "0 1px 3px 1px hsla(0,0%,40%,.24)",
   boxShadowHover: "0 1px 6px 1px hsla(0,0%,40%,.48)",
@@ -35,6 +37,13 @@ const petuniasTheme = {
     xs: "1.2rem",
     s: "1.4rem",
     base: "1.6rem",
+  },
+  spacing: {
+    space1: "10px",
+    space2: "20px",
+    space3: "35px",
+    space4: "40px",
+    space5: "50px",
   },
 }
 

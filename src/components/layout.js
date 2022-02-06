@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
@@ -23,13 +24,17 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={petuniasTheme}>
       <GlobalStyles />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
-        <main>{children}</main>
-        <footer>
-          &copy; {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <div className="page" id="page">
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <main className="page-content" id="page-content">
+          {children}
+        </main>
+        <footer className="page-footer" id="page-footer">
+          <div className="max-w max-gl">
+            <div className="pa-2">
+              &copy; {new Date().getFullYear()} {data.site.siteMetadata?.author}
+            </div>
+          </div>
         </footer>
       </div>
     </ThemeProvider>
