@@ -10,9 +10,8 @@ const IndexPage = () => (
     <Seo title="Home" />
     <div className="max-w max-gl">
       <div className="pa-2">
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
+        <h1>Petunia&rsquo;s House</h1>
+        <p>Dis are my home page</p>
       </div>
     </div>
     <ImageFeed />
